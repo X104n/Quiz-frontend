@@ -6,7 +6,9 @@ import {Quiz} from './Quiz';
 function App() {
   return (
     <SkeBasis>
-      <Quiz></Quiz>
+      <Quiz fasit= "Berlin" />
+        
+      <Quiz />
       {/* <div className="App-header">
         Hei
         <Button buttonStyle="primary" mobileFullWidth>
