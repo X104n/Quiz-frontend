@@ -4,11 +4,19 @@ export const Quiz = () => {
     const options = [
         {
             key: 'A',
-            text: 'Enkeltpersonsforetak',
+            text: 'Oslo',
         },
         {
             key: 'B',
-            text: 'Aksjeselskap',
+            text: 'Paris',
+        },
+        {
+            key: 'C',
+            text: 'Berlin',
+        },
+        {
+            key: 'D',
+            text: 'Madrid',
         },
     ];
     return (
