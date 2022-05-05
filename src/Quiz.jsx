@@ -2,7 +2,7 @@ import { RadioButtonGroup } from '@skatteetaten/frontend-components/RadioButtonG
 import React from 'react'
 import { Button } from '@skatteetaten/frontend-components/Button';
 
-export const Quiz = () => {
+export const Quiz = (props) => {
     const options = [
         {
             key: 'A',
@@ -25,7 +25,7 @@ export const Quiz = () => {
     const [valgtAlternativ, setValgtAlternativ] = React.useState("");
     const [harAvgittSvar, setHarAvgittSvar] = React.useState(false);
 
-    const fasit = "Berlin"
+    const fasit = props.fasit
     const svarmelding = valgtAlternativ == fasit ? 'Rikitig' : 'Feil'
 
     React.useEffect(() => {
@@ -38,10 +38,10 @@ export const Quiz = () => {
             <RadioButtonGroup
                 label="Alternativer"
                 options={options}
-                // onChange={(e, option) => {
-                //     setValgtAlternativ(option.text)
-                //     console.log(option)
-                // }}
+                onChange={(e, option) => {
+                    setValgtAlternativ(option.text)
+                    console.log(option)
+                }}
                 id="radio"
             />
             {/* <div>
